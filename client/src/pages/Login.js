@@ -22,7 +22,7 @@ class Login extends React.Component {
 		console.log(this.state.password);
 
 		if(this.state.username && this.state.password){
-const data = {username: this.state.username, password: this.state.password}
+			const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/login", data).then(res => {
 				console.log(res);
 				console.log("login data captured");
