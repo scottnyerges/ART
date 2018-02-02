@@ -34,7 +34,11 @@ router.post("/register", function(req,res){
 router.post("/login", passport.authenticate("local"), function(req,res){
 	res.json(true)
 
+
+
 });
+
+
 
 // logout
 router.get("/logout", function(req, res){

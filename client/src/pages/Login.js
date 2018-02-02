@@ -9,7 +9,7 @@ class Login extends React.Component {
 	};
 
 	handleInputChange = event => {
-		const {name, value } = event.target;
+		const {name, value} = event.target;
 		this.setState({
 			[name]:value
 		})
@@ -17,10 +17,16 @@ class Login extends React.Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
+		console.log("form submitted");
+		console.log(this.state.username);
+		console.log(this.state.password);
+
 		if(this.state.username && this.state.password){
 const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/login", data).then(res => {
 				console.log(res);
+				console.log("login data captured");
+				this.props.history.push("/gallery");
 			})
 		}
 
@@ -32,8 +38,9 @@ const data = {username: this.state.username, password: this.state.password}
 		<div>
 
 		<form>
-			<label>Username</label><input name="username" onChange={this.handleInputChange} /><br />
-			<label>Password</label><input type="password" onChange={this.handleInputChange} /><br />
+			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange} /><br />
+			<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange} /><br />
+
 			<button onClick={this.handleFormSubmit}>Submit</button>
 		</form>	
 
