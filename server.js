@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
+const fetchController = require("./controllers/fetch");
+
+
 const PORT = process.env.PORT || 3001;
 
 const authRoutes = require("./routes/auth");
@@ -51,6 +54,8 @@ app.use("/api/auth", authRoutes);
 app.get("/api/test", function(req,res){
 	res.send("All good");
 })
+
+app.get("/api/fetch", fetchController.scrapeHeadlines)
 
 app.get("*", function(req,res){
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
