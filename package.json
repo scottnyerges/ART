@@ -1,7 +1,6 @@
 {
   "name": "fix",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "server": "node.server.js",
@@ -14,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18.2",
+    "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "1.4.3",
     "express": "4.16.2",
     "express-session": "1.15.6",
@@ -27,5 +27,10 @@
     "concurrently": "3.5.1",
     "nodemon": "1.14.11"
   },
-  "repository": "git@github.com:scottnyerges/ART.git"
+  "repository": "git+https://github.com/scottnyerges/ART.git",
+  "bugs": {
+    "url": "https://github.com/scottnyerges/ART/issues"
+  },
+  "homepage": "https://github.com/scottnyerges/ART#readme",
+  "description": ""
 }
