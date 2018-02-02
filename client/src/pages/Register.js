@@ -17,11 +17,16 @@ class Register extends React.Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
+		console.log("registration submitted");
+		console.log(this.state.username);
+		console.log(this.state.password);
+		
 		if(this.state.username && this.state.password){
 			// ADD OTHER VARIABLES INTO && LINE ABOVE?
 const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/register", data).then(res => {
 				console.log(res);
+				this.props.history.push("/login");
 			})
 		}
 
