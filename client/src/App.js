@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import NoMatch from "./pages/NoMatch";
 import Frontpage from "./pages/Frontpage";
+import Gallery from "./pages/Gallery";
 
 
 
