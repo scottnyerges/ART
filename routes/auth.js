@@ -8,13 +8,16 @@ const router = express.Router();
 // a way to display the user
 
 // request for registering
+// WOULD I HAVE TO ADD THE OTHER USER VARIABLS HERE???
 router.post("/register", function(req,res){
+	console.log(req.body);
 	Account.register(new Account({
 		username: req.body.username
-	},
+	}),
 	req.body.password,
 	function(err,account){
 		if(err){
+			console.log(err);
 			// return that didn't work
 			return res.json(false);
 		}
@@ -24,7 +27,7 @@ router.post("/register", function(req,res){
 			res.json(true);
 		})
 
-	}))
+	});
 });
 
 // request for login

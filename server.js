@@ -53,7 +53,7 @@ app.get("/api/test", function(req,res){
 })
 
 app.get("*", function(req,res){
-	res.sendfile(path.join(__dirname, "./client/build/index.html"));
+	res.sendFile(path.join(__dirname, "./client/build/index.html"));
 })
 
 app.listen(PORT, function(){

@@ -5,6 +5,8 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const Account = new Schema ({
 	username: String,
 	password: String,
+	// IS THIS WHERE I ADD ADDITIONAL USER DATA VARs LIKE URL, ETC?
+	// THESE VARS WOULD COME FROM 
 });
 
 Account.plugin(passportLocalMongoose);
