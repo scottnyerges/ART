@@ -18,7 +18,7 @@ class Login extends React.Component {
 	handleFormSubmit = event => {
 		event.preventDefault();
 		if(this.state.username && this.state.password){
-const data = {username: this.state.username, password: this.state.password}
+			const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/login", data).then(res => {
 				console.log(res);
 			})
