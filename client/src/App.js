@@ -23,12 +23,8 @@ class App extends Component {
         	<Switch>
         		<Route exact path="/login" component={Login}/>
         		<Route exact path="/register" component={Register}/>
-<<<<<<< HEAD
         		<Route exact path="/home" component={Frontpage}/>
             <Route exact path="/gallery" component={Gallery}/>
-=======
-        		<Route exact path="/home" component={Home}/>
->>>>>>> 784fe0513af2c62710b424ffb37f95c7f7bb1fa4
         		<Route component={NoMatch}/>
         	</Switch>	    	
 
