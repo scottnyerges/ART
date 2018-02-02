@@ -1,8 +1,9 @@
 import React from "react";
+import axios from "axios";
 
 const NoMatch = () => {
 	return (
-		<div>NoMatch</div>
+		<div><p>That page doesn't exist. Better backtrack...</p></div>
 		)
 };
 

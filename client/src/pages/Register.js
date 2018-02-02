@@ -4,8 +4,10 @@ import axios from "axios";
 class Register extends React.Component {
 	state = {
 		username:"",
-		password:""
-		// ADD ADDITIONAL USER REGISTRATION FIELDS HERE?
+		password:"",
+		website:"",
+		image:"",
+		medium:"",
 	};
 
 	handleInputChange = event => {
@@ -17,9 +19,15 @@ class Register extends React.Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
-		if(this.state.username && this.state.password){
-			// ADD OTHER VARIABLES INTO && LINE ABOVE?
-const data = {username: this.state.username, password: this.state.password}
+		console.log("registration submitted");
+		console.log(this.state.username);
+		console.log(this.state.password);
+		console.log(this.state.website);
+		console.log(this.state.image);
+		console.log(this.state.medium);
+		
+		if(this.state.username && this.state.password && this.state.website){
+			const data = {username: this.state.username, password: this.state.password, website: this.state.website, image: this.state.image, medium: this.state.medium}
 			axios.post("/api/auth/register", data).then(res => {
 				console.log(res);
 			})
@@ -35,6 +43,9 @@ const data = {username: this.state.username, password: this.state.password}
 		<form>
 			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange}/><br />
 			<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange}/><br />
+			<label>Website</label><input name="website" value={this.state.website} onChange={this.handleInputChange}/><br />
+			<label>Image URL</label><input name="image" value={this.state.image} onChange={this.handleInputChange}/><br />
+			<label>Primary medium</label><input name="medium" value={this.state.medium} onChange={this.handleInputChange}/><br />
 			
 			<button onClick={this.handleFormSubmit}>Submit</button>
 		</form>	
