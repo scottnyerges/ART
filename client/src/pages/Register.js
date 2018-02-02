@@ -5,6 +5,7 @@ class Register extends React.Component {
 	state = {
 		username:"",
 		password:""
+		// ADD ADDITIONAL USER REGISTRATION FIELDS HERE?
 	};
 
 	handleInputChange = event => {
@@ -17,6 +18,7 @@ class Register extends React.Component {
 	handleFormSubmit = event => {
 		event.preventDefault();
 		if(this.state.username && this.state.password){
+			// ADD OTHER VARIABLES INTO && LINE ABOVE?
 const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/register", data).then(res => {
 				console.log(res);
@@ -30,9 +32,10 @@ const data = {username: this.state.username, password: this.state.password}
 	return (
 		<div>
 
-		<form action="POST">
+		<form>
 			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange}/><br />
 			<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange}/><br />
+			
 			<button onClick={this.handleFormSubmit}>Submit</button>
 		</form>	
 

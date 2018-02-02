@@ -31,7 +31,7 @@ const data = {username: this.state.username, password: this.state.password}
 	return (
 		<div>
 
-		<form action="POST">
+		<form>
 			<label>Username</label><input name="username" onChange={this.handleInputChange} /><br />
 			<label>Password</label><input type="password" onChange={this.handleInputChange} /><br />
 			<button onClick={this.handleFormSubmit}>Submit</button>
