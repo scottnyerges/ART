@@ -26,10 +26,11 @@ class Register extends React.Component {
 		console.log(this.state.image);
 		console.log(this.state.medium);
 		
-		if(this.state.username && this.state.password && this.state.website){
+		if(this.state.username && this.state.password && this.state.website && this.state.image && this.state.medium){
 			const data = {username: this.state.username, password: this.state.password, website: this.state.website, image: this.state.image, medium: this.state.medium}
 			axios.post("/api/auth/register", data).then(res => {
 				console.log(res);
+				this.props.history.push("/login");
 			})
 		}
 
@@ -41,6 +42,7 @@ class Register extends React.Component {
 		<div>
 
 		<form>
+			<h2>Join the community!</h2>
 			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange}/><br />
 			<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange}/><br />
 			<label>Website</label><input name="website" value={this.state.website} onChange={this.handleInputChange}/><br />
