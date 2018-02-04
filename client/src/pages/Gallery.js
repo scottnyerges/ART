@@ -3,13 +3,13 @@ import axios from "axios";
 
 class Gallery extends React.Component {
 
-    //     state = {
-    //     username:"",
-    //     password:"",
-    //     website:"",
-    //     image:"",
-    //     medium:"",
-    // };
+        state = {
+        username:"",
+        password:"",
+        website:"",
+        image:"",
+        medium:"",
+    };
 
     constructor() {
         super();
@@ -62,21 +62,8 @@ class Gallery extends React.Component {
                 <h2>Member gallery</h2>
                 {this.state.members}
             {/*This is a button to send you to the home page*/}
-                {/*<br/><br/>
-               <form action="/home"><input type="submit" value="Home"/></form>  */}
-            </div>
-        )
-    }
-}
-
-export default Gallery
-
-
-    render() {
-        return (
-            <div>
-                {/*render the data list here; what goes to the gallery page*/}
-                {this.state.members}
+                <br/><br/>
+               <form action="/home"><input type="submit" value="Home"/></form>  
             </div>
         )
     }
