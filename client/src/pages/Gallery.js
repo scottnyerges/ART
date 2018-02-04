@@ -15,18 +15,19 @@ class Gallery extends React.Component {
     componentWillMount() {
         // CALL THE API, our list of users; trying to call from the model account.js, which should be where userdata is....
         fetch(
-            "./Account"
+            '/api/account'
         ).then(
             results => results.json()
             ).then(
             data => {
 
                 // this maps over the data
-                let members = data.results.map((member, index) => {
+                let members = data.map((member, index) => {
                     return (
                         <div key={member.results}>
                             {/*SELECT WHAT DATA TO RETURN*/}
                             <li>{member.username}</li>
+                            
                         </div>
                     )
                 });
