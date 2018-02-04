@@ -7,7 +7,10 @@ const router = express.Router();
 router.post("/register", function(req,res){
 	console.log(req.body);
 	Account.register(new Account({
-		username: req.body.username
+		username: req.body.username,
+		website: req.body.website,
+		image: req.body.image,
+		medium: req.body.medium
 	}),
 	req.body.password,
 	function(err,account){
