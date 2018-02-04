@@ -3,6 +3,14 @@ import axios from "axios";
 
 class Gallery extends React.Component {
 
+    //     state = {
+    //     username:"",
+    //     password:"",
+    //     website:"",
+    //     image:"",
+    //     medium:"",
+    // };
+
     constructor() {
         super();
 
@@ -26,11 +34,19 @@ class Gallery extends React.Component {
                     return (
                         <div key={member.results}>
                             {/*SELECT WHAT DATA TO RETURN*/}
-                            <li>{member.username}</li>
-                            
+                            <ul>Name: {member.username}</ul>
+                            <ul>ID: {member._id}</ul>
+                            <ul>Website: {member.website}</ul>
+                            <ul>Image: {member.image}</ul>
+                            <ul>Medium: {member.medium}</ul>
+                            <br/><br/>
                         </div>
                     )
                 });
+
+
+
+
 
                 // here, we reset the member array state from empty to "full"
                 console.log("state", this.state.members);
@@ -38,6 +54,23 @@ class Gallery extends React.Component {
             }
             );
     }
+
+    render() {
+        return (
+            <div>
+                {/*render the data list here; what goes to the gallery page*/}
+                <h2>Member gallery</h2>
+                {this.state.members}
+            {/*This is a button to send you to the home page*/}
+                {/*<br/><br/>
+               <form action="/home"><input type="submit" value="Home"/></form>  */}
+            </div>
+        )
+    }
+}
+
+export default Gallery
+
 
     render() {
         return (
