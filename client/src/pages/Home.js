@@ -1,11 +1,9 @@
 import React from "react";
+
 import ArtEventList from "../components/ArtEventList";
+
 import ArtEvent from "../components/ArtEvent";
-let myHeadline = "testhead:"
-let mySummary = "testsum:"
-let myURL = "testURL:"
-let myVenue = "testvenue:"
-let myDate = "testdate:"
+
 
 const Home = () => {
 	return (

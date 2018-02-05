@@ -30,6 +30,8 @@ class Register extends React.Component {
 			const data = {username: this.state.username, password: this.state.password, website: this.state.website, image: this.state.image, medium: this.state.medium}
 			axios.post("/api/auth/register", data).then(res => {
 				console.log(res);
+				console.log(res);
+				this.props.history.push("/login");
 			})
 		}
 
