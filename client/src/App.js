@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import NoMatch from "./pages/NoMatch";
-import Frontpage from "./pages/Frontpage";
+// import Frontpage from "./pages/Frontpage";
 import Gallery from "./pages/Gallery";
 
 
@@ -24,7 +24,7 @@ class App extends Component {
         	<Switch>
         		<Route exact path="/login" component={Login}/>
         		<Route exact path="/register" component={Register}/>
-        		<Route exact path="/home" component={Frontpage}/>
+        		<Route exact path="/home" component={Home}/>
             <Route exact path="/gallery" component={Gallery}/>
         		<Route component={NoMatch}/>
         	</Switch>	    	
