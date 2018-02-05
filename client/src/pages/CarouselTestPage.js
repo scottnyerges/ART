@@ -4,7 +4,6 @@ const ReactDOM = require("react-dom");
 const { render } = ReactDOM;
 
 
-
 const carouselSlidesData = [
   {
   src: "./images/slide01.png",
@@ -105,9 +104,6 @@ const carouselSlidesData = [
 ]
 
 
-
-//this is a function that returns a div with classname Carousel Container
-//it also renders the component Carousel which includes carousel slides data
 const CarouselTestPage = () => {
 	return (
 		<div className="carousel-container">
@@ -116,11 +112,7 @@ const CarouselTestPage = () => {
 	)
 }
 
-//&&&&&&&&&&&&&&&&&&&&&&
 
-
-// Component for slide
-//returns a slide in li form containing a p with content props.slide.content
 class CarouselSlide extends React.Component {
   render() {
     return (
@@ -147,7 +139,7 @@ class CarouselSlide extends React.Component {
   }
 }
 
-// Carousel component
+
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
