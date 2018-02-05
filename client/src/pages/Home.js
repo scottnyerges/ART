@@ -3,15 +3,25 @@ import Button from "../components/Button"
 
 const Home = () => {
 	return (
-		<div>Home 
-		<br/>
-		<img src="http://get-a-wingman.com/wp-content/uploads/2015/10/How-to-Groom-a-Beard-660x273.jpg"/>
-		<form action="./Login"><input type="submit" value="Login"/></form> 
-		<form action="./Register"><input type="submit" value="Register"/></form> 
-		<form action="./Gallery"><input type="submit" value="Member Gallery"/></form> 
+
+		<div>
+			<div class="row">
+				<h1>AustinArtFNDR v1.0</h1> 
+				<h2>Welcome.</h2>
+			</div>
+			<div class="row">	
+			<img src={require("../logo.png")} />
+				<div class="column">
+					<h3>Already a member? Log in!</h3>
+						<form action="/login"><input type="submit" value="Login"/></form> 
+						<h3>Create an account!</h3>
+						<form action="/register"><input type="submit" value="Register"/></form>
+				</div>	
+					 
+			</div>
+
 		</div>
 		)
 };
-
 
 export default Home
