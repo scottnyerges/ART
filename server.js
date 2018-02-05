@@ -7,6 +7,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
 const fetchController = require("./controllers/fetch");
+const headlineController = require("./controllers/headline");
 
 
 const PORT = process.env.PORT || 3001;
@@ -55,11 +56,9 @@ app.use("/api/auth", authRoutes);
 
 
 // THIS WILL SEND ACCOUNT INFO TO THE GALLERY PAGE
-app.get("/api/account", function
-(req, res) {
+app.get("/api/account", function(req, res) {
 
-    Account.find({}, function (err,
-accounts) {
+    Account.find({}, function (err, accounts) {
 
         res.send(accounts);
 
@@ -69,9 +68,7 @@ accounts) {
 
 app.get("/api/fetch", fetchController.scrapeHeadlines);
 
-app.get("/api/artevents", function(req, res){
-	res.send("All good");
-});
+app.get("/api/artevents", headlineController.findAll);
 
 
 app.get("*", function(req,res){

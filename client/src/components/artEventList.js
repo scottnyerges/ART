@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDom from 'react-dom';
-import axios from 'axios'
+import axios from 'axios';
 
-class ArtEventList extends React.component {
+class ArtEventList extends React.Component {
 
   state = {
     artevents: []
@@ -11,17 +11,18 @@ class ArtEventList extends React.component {
   componentDidMount(){
     axios.get("/api/artevents").then(res => {
     	console.log(res);
-      // this.setState({artevents: res.data.artevents});
+		this.setState({artevents: res.data});
     })
-  }
+  };
 
   render(){
     return (
       <div>
-      this.state.artevents.map(artevents => (
-        <ArtEventItem website={artevents.website} />
-      ))
+     
+     <p></p>
       </div>
     );
   }
 }
+
+export default ArtEventList;

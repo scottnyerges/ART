@@ -42,6 +42,7 @@ var headlineSchema = new Schema({
   }
 });
 
+
 // Create the Headline model using the headlineSchema
 var Headline = mongoose.model("Headline", headlineSchema);
 
