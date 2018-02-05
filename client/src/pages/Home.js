@@ -1,12 +1,8 @@
 import React from "react";
 import Button from "../components/Button";
-import ArtEventList from "../components/ArtEventList";
+import ArtEventList from "../components/artEventList";
 import ArtEvent from "../components/ArtEvent";
-let myHeadline = "testhead:"
-let mySummary = "testsum:"
-let myURL = "testURL:"
-let myVenue = "testvenue:"
-let myDate = "testdate:"
+
 
 const Home = () => {
 	return (
@@ -17,7 +13,7 @@ const Home = () => {
 
 		<div className="row" id="row">
 		<h3>Events</h3>
-		<ArtEvent headline={myHeadline} summary={mySummary} URL={myURL} venue={myVenue} date={myDate}/>
+		<ArtEventList />		
 		</div>
 
 
@@ -35,9 +31,8 @@ const Home = () => {
 						<h3>Create an account!</h3>
 						<form action="/register"><input type="submit" value="Register"/></form>
 
-						<h3>Scraper goes here</h3>
-						<Button />
-						<ArtEventList />
+						
+						
 
 				</div>
 			</div>			
