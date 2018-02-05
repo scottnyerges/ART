@@ -12,8 +12,9 @@
   "author": "Scott N. <hutchense@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "axios": "0.17.1",
     "body-parser": "1.18.2",
-    "cheerio": "^1.0.0-rc.2",
+    "cheerio": "1.0.0-rc.2",
     "cookie-parser": "1.4.3",
     "express": "4.16.2",
     "express-session": "1.15.6",
