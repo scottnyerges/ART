@@ -1,5 +1,5 @@
 import React from "react";
-import ArtEventList from "../components/ArtEventList";
+import ArtEventList from "../components/artEventList";
 import ArtEvent from "../components/ArtEvent";
 let myHeadline = "testhead:"
 let mySummary = "testsum:"
