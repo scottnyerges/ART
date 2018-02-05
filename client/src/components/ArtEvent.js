@@ -10,7 +10,8 @@ const ArtEvent = (props) => {
       <p>{props.url}</p>
       <p>{props.venue}</p>
       <p>{props.date}</p>
-      <br/><br/>
+      <p>---------------------------------</p>
+      <br/>
     </div>
   )
 }

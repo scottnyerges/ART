@@ -10,10 +10,11 @@ class ArtEventList extends React.Component {
   };
 
   componentDidMount(){
-    axios.get("/api/artevents").then(res => {
-    	console.log(res);
-		this.setState({artevents: res.data});
-    })
+    axios.get("/api/fetch").then(data => {
+      axios.get("/api/artevents").then(res => {
+        this.setState({artevents: res.data});
+      });
+    });
   };
 
   render(){
