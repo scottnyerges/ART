@@ -54,12 +54,6 @@ if(process.env.NODE_ENV === "production"){
 app.use("/api/auth", authRoutes);
 
 
-
-app.get("/api/test", function(req,res){
-	res.send("All good");
-})
-
-
 // THIS WILL SEND ACCOUNT INFO TO THE GALLERY PAGE
 app.get("/api/account", function
 (req, res) {
@@ -73,12 +67,16 @@ accounts) {
 
 });
 
-app.get("/api/fetch", fetchController.scrapeHeadlines)
+app.get("/api/fetch", fetchController.scrapeHeadlines);
+
+app.get("/api/artevents", function(req, res){
+	res.send("All good");
+});
 
 
 app.get("*", function(req,res){
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
-})
+});
 
 
 
