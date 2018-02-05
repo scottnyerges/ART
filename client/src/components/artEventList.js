@@ -21,9 +21,9 @@ class ArtEventList extends React.Component {
       <div>
         {this.state.artevents.map((AE) => 
           <ArtEvent headline={AE.headline} summary={AE.summary} url={AE.url} date = {AE.date} venue={AE.venue}/>
-          )}
+        )}
       </div>
-  }
+  )}
 }
 
 export default ArtEventList;

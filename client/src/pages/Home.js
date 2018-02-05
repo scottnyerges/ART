@@ -1,29 +1,12 @@
 import React from "react";
 import Button from "../components/Button";
-
+import ArtEventList from "../components/ArtEventList";
 import ArtEvent from "../components/ArtEvent";
 let myHeadline = "testhead:"
 let mySummary = "testsum:"
 let myURL = "testURL:"
 let myVenue = "testvenue:"
 let myDate = "testdate:"
-
-
-import ArtEventList from "../components/ArtEventList";
-
-
-
-// class Home extends React.Component {
-//         state = {
-//         headline:"",
-//         summary:"",
-//         URL:"",
-//         venue:"",
-//         date:"",
-//     };
-
-// componentDidMount() {
-// }
 
 const Home = () => {
 	return (
