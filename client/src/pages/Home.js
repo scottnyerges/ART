@@ -1,7 +1,9 @@
 import React from "react";
+import Button from "../components/Button"
 
 const Home = () => {
 	return (
+
 		<div>
 			<div class="row">
 				<h1>AustinArtFNDR v1.0</h1> 
@@ -17,9 +19,9 @@ const Home = () => {
 				</div>	
 					 
 			</div>
+
 		</div>
 		)
 };
-
 
 export default Home
