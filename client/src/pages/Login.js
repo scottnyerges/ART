@@ -21,6 +21,9 @@ class Login extends React.Component {
 			const data = {username: this.state.username, password: this.state.password}
 			axios.post("/api/auth/login", data).then(res => {
 				console.log(res);
+				
+				console.log("login data captured");
+				this.props.history.push("/gallery");
 			})
 		}
 
@@ -32,8 +35,9 @@ class Login extends React.Component {
 		<div>
 
 		<form>
-			<label>Username</label><input name="username" onChange={this.handleInputChange} /><br />
-			<label>Password</label><input type="password" onChange={this.handleInputChange} /><br />
+			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange} /><br />
+						<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange} /><br />
+
 			<button onClick={this.handleFormSubmit}>Submit</button>
 		</form>	
 
