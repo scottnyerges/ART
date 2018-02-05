@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from 'react-dom';
 import axios from 'axios';
+import ArtEvent from './ArtEvent'
 
 class ArtEventList extends React.Component {
 
@@ -18,11 +19,11 @@ class ArtEventList extends React.Component {
   render(){
     return (
       <div>
-     
-     <p></p>
+        {this.state.artevents.map((AE) => 
+          <ArtEvent headline={AE.headline} summary={AE.summary} url={AE.url} date = {AE.date} venue={AE.venue}/>
+        )}
       </div>
-    );
-  }
+  )}
 }
 
 export default ArtEventList;
