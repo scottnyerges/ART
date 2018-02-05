@@ -36,7 +36,7 @@ passport.deserializeUser(Account.deserializeUser());
 
 
 
-mongoose.connect("mongodb://localhost/fix");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fix");
 
 app.use(expressSession({
 	secret: "keyboard cat",
