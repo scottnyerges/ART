@@ -4,8 +4,8 @@ import axios from "axios";
 
 class Login extends React.Component {
 	state = {
-		username:"",
-		password:""
+		username: "",
+		password: ""
 	};
 
 	handleInputChange = event => {
@@ -35,8 +35,8 @@ class Login extends React.Component {
 		<div>
 
 		<form>
-			<label>Username</label><input name="username" value={this.state.username} onChange={this.handleInputChange} /><br />
-						<label>Password</label><input name="password" value={this.state.password} onChange={this.handleInputChange} /><br />
+			<label>Username </label><input name="username" value={this.state.username} onChange={this.handleInputChange} /><br />
+						<label>Password </label><input name="password" value={this.state.password} onChange={this.handleInputChange} /><br />
 
 			<button onClick={this.handleFormSubmit}>Submit</button>
 		</form>	
