@@ -17,7 +17,6 @@ img {
 .row {
 	margin: 10px;
 	padding: 10px;
-    background-color: lightgray;
 }
 
 #row {
@@ -25,6 +24,7 @@ img {
 	padding: 10px;
 	width: 350px;
     height: 150px;
-    background-color: lightgray;
     overflow: scroll;
+    float: right;
+    background-color: ghostwhite;
 }
