@@ -4,7 +4,7 @@ AAF is your one-stop app for all things art in Austin. Find gallery openings, pe
 
 A members-only section allows local artists and creatives to connect and network, with a Craigslist-like marketplace where members can offer services, find jobs, search for studio space, collaborate, and more.
 
-AAF is a React-based app using Node and Axios.
+Currently in development, AAF is a React-based app using Node and Axios.
 
 * [Initial flowchart](https://github.com/scottnyerges/ART/blob/master/Flowchart.pdf)
 * [Preliminary wireframe](https://github.com/scottnyerges/ART/blob/master/Wireframe1.png)
