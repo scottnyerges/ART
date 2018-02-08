@@ -6,5 +6,6 @@ A members-only section allows local artists and creatives to connect and network
 
 AAF is a React-based app using Node and Axios.
 
-Wireframes:
-Demo login: 
+![Wireframes](
+![Demo login](https://github.com/scottnyerges/ART/blob/master/AFdemologin.mov)
+
